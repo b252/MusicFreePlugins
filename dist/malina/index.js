@@ -46,7 +46,7 @@ module.exports = {
                 })
             });
             return {
-                isEnd: true,
+                isEnd: $('#p-container').find('.p-text').last().text() <= page,
                 data: searchResults
             }
         }
