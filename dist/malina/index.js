@@ -10,10 +10,7 @@ module.exports = {
             // 我们能搜索的只有音乐，因此判断下类型
             // 获取网站的html
             const rawHtml = (
-                await axios.get("https://zvu4no.org/tracks/", {
-                    q: query,
-                    page,
-                })
+                await axios.get("https://zvu4no.org/tracks/" + escape(query) + "/" + page)
             ).data;
 
             // 接下来解析html 
