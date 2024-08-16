@@ -23,13 +23,13 @@ module.exports = {
             resultElements.each((index, element) => {
                 const playerElement = $(element).find('.artist-name');
                 // id
-                const id = $(element).find('.track-name').text();
+                const id = $(element).find('.mp3').attr("href");
                 // 音频名
                 const title = $(element).find('.track-name').text();
                 // 作者
                 const artist = $(element).find('.artist-name').text();
                 // 专辑封面
-                const artwork = $(element).find('.c-img').text();
+                const artwork = 'https:' + $($('.c-img')[0]).find('img').attr('src');
                 // 音源
                 const url = 'https:' + $(element).find('.mp3').attr("href");
                 // 专辑名，这里就随便写个了，不写也没事
