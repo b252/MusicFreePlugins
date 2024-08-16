@@ -31,7 +31,7 @@ module.exports = {
                 // 专辑封面
                 const artwork = $(element).find('.c-img').text();
                 // 音源
-                const url = $(element).find('.mp3').attr("href");
+                const url = 'https:' + $(element).find('.mp3').attr("href");
                 // 专辑名，这里就随便写个了，不写也没事
                 const album = '';
 
